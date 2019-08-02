@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            background-image: url("fondo.jpg");
+            background-size: contain;
+            
+        }
+        h1 {
+        	width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-left: 0px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: center;
+            background-color: #4267B2;
+            color: white;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 25%;
+            background-color: rgb(14, 13, 13);
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+        
+        li a {
+            display: block;
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+        
+        li a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        li a:hover:not(.active) {
+            background-color: #555;
+            color: white;
+        }
+    </style>
+    <style>
+        input[type=text],
+        select {
+            width: 20%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        input[type=submit] {
+            width: 12%;
+            background-color: #4267B2;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        input[type=submit]:hover {
+            background-color: #0000FF;
+        }
+        
+        div {
+            border-radius: 5px;
+            background-image: url("fondo4.jpg");
+            background-size: contain;
+            padding: 20px;
+        }
+        
+       
+    </style>
+
+    <style>
+        table {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 30%;
+        }
+        
+        table td,
+        table th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        
+        table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        table tr:hover {
+            background-color: #ddd;
+        }
+        
+        table th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4267B2;
+            color: white;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    
+
+    <div style="margin-left:10%;padding:1px 16px;height:1000px;margin-right: 6%; background-image: url(fondo.jpg); background-size: contain; ">
+    	 <h1>Redes locales </h1>
+
+        <div id="formularioBinario">
+
+            <span><strong>ALGORITMO DE CRC</strong></span>
+            <br>
+            <br>
+            <form id="forBinarioD" onsubmit="return false" method="POST">
+                <label for="numD"> <strong>TRAMA </strong> </label>
+                <input type="text" id="numD" name="numD" placeholder="..">
+                <label for="numG">  <strong>GENERADOR </strong></label>
+                <input type="text" id="numG" name="numG" placeholder="..">
+                <input type="submit" value="ENVIAR">
+            </form>
+        </div>
+        <hr>
+        <div id="errores">
+
+        </div>
+
+        <div id="botones">
+            <input type="submit" id="strat" value="VERIFICAR">
+        </div>
+
+        <div id="resultadoPrimeraDivision" style="margin-top:-30px;">
+            <table id="customers">
+                <tr>
+                    <th>DIVISION No 1</th>
+                </tr>
+                <tr>
+                    <td>D: <span id="primerD"> </span></td>
+                </tr>
+                <tr>
+                    <td>G: <span id="primerG"> </span></td>
+                </tr>
+                <tr>
+                    <td>R: <span id="primerR"> </span></td>
+                </tr>
+                <tr>
+                    <td>TX: <span id="primerTX"> </span></td>
+                </tr>
+
+            </table>
+            <br>
+            <table id="segunda" style="margin-left: 450px; margin-top: -205px">
+                <th> <span><strong>DIVISION No2</strong></span></th>
+                <tr>
+                    <td>D: <span id="segundaD"></span></td>
+                </tr>
+                <tr>
+                    <td>G: <span id="segundaG"></span></td>
+                </tr>
+                <tr>
+                    <td>R: <span id="segundaR"></span></td>
+                </tr>
+                <tr>
+                    <td>Resultado: <span id="resultado"> </span></td>
+                </tr>
+            </table>
+            <br>
+
+            <table id="tercera" style="margin-left: 900px; margin-top: -275px; display: none">
+                
+            </style>>
+                <th> <span><strong></strong></span></th>
+                <tr>
+                    <td>D: <span id="poliD"></span></td>
+                </tr>
+                <tr>
+                    <td>G: <span id="poliG"></span></td>
+                </tr>
+            </table>
+            <br>
+            <table id="cuatro" style="margin-left: 900px; margin-top: 0px; display: none">
+                <th> <span><strong></strong></span></th>
+                <tr>
+                    <td>D: <span id="hexaD"></span></td>
+                </tr>
+                <tr>
+                    <td>G: <span id="hexaG"></span></td>
+                </tr>
+            </table>
+            <br> 
+        </div>
+        <script src="calculo.js"></script>
+
+    </div>
+
+</body>
+
+</html>
